@@ -432,3 +432,11 @@ export HADOOP_OS_TYPE=${HADOOP_OS_TYPE:-$(uname -s)}
 # By default, Hadoop uses jsvc which needs to know to launch a
 # server jvm.
 # export HADOOP_REGISTRYDNS_SECURE_EXTRA_OPTS="-jvm server"
+
+export JAVA_HOME=/usr/lib/jvm/default
+
+# 解决遇到的 java.lang.reflect.InaccessibleObjectException 错误
+# 由于 JDK 17 和 Java 模块系统的兼容性问题导致的。
+# Java 9 及以上版本引入了 模块系统，需要显式地打开特定的模块才能允许访问某些类。
+export HADOOP_OPTS="$HADOOP_OPTS --add-opens java.base/java.lang=ALL-UNNAMED"
+export YARN_OPTS="$YARN_OPTS --add-opens java.base/java.lang=ALL-UNNAMED"
