@@ -80,13 +80,7 @@
 # - SPARK_BEELINE_OPTS, to set config properties only for the beeline cli (e.g. "-Dx=y")
 # - SPARK_BEELINE_MEMORY, Memory for beeline (e.g. 1000M, 2G) (Default: 1G)
 
-HADOOP_HOME=/data/bigdata/bin/hadoop
-HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
-SPARK_HOME=/data/bigdata/bin/spark
-SPARK_LIBARY_PATH=.:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$HADOOP_HOME/lib/native
-SPARK_MASTER_HOST=local.server.cn.eu.org
-SPARK_MASTER_PORT=7077
-SPARK_MASTER_WEBUI_PORT=8080
-SPARK_WORKER_WEBUI_PORT=8081
-SPARK_LOCAL_IP=local.server.cn.eu.org
+export HADOOP_HOME=/data/bigdata/bin/hadoop
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export SPARK_HOME=/data/bigdata/bin/spark
