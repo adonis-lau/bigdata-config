@@ -26,6 +26,7 @@
 
 # The java implementation to use.  Java 1.8+ required.
 # export JAVA_HOME=/usr/java/jdk1.8.0/
+export JAVA_HOME=/usr/lib/jvm/default
 
 # Extra Java CLASSPATH elements.  Optional.
 # export HBASE_CLASSPATH=
@@ -116,6 +117,7 @@
 
 # The directory where pid files are stored. /tmp by default.
 # export HBASE_PID_DIR=/var/hadoop/pids
+export HBASE_PID_DIR=/data/bigdata/ops/tmp-$USER/pids
 
 # Seconds to sleep between slave commands.  Unset by default.  This
 # can be useful in large clusters, where, e.g., slave rsyncs can
@@ -124,6 +126,7 @@
 
 # Tell HBase whether it should manage it's own instance of ZooKeeper or not.
 # export HBASE_MANAGES_ZK=true
+export HBASE_MANAGES_ZK=false
 
 # The default log rolling policy is RFA, where the log file is rolled as per the size defined for the
 # RFA appender. Please refer to the log4j2.properties file to see more details on this appender.
