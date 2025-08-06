@@ -8,9 +8,17 @@
   </property>
 
   <property>
+    <name>hive.metastore.db.type</name>
+    <value>mysql</value>
+    <description>
+      Expects one of [derby, oracle, mysql, mssql, postgres].
+      Type of database used by the metastore. Information schema &amp; JDBCStorageHandler depend on it.
+    </description>
+  </property>
+
+  <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>
-      jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/hive_metastore_db?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;allowMultiQueries=true&amp;useCursorFetch=true&amp;sslMode=VERIFY_IDENTITY&amp;enabledTLSProtocols=TLSv1.2,TLSv1.3&amp;serverTimezone=Asia/Shanghai</value>
+    <value>jdbc:mysql://10.0.0.163:3306/hive_metastore?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;allowMultiQueries=true&amp;useCursorFetch=true&amp;sslMode=VERIFY_IDENTITY&amp;enabledTLSProtocols=TLSv1.2,TLSv1.3&amp;serverTimezone=Asia/Shanghai</value>
     <description>JDBC connect string for a JDBC metastore.</description>
   </property>
 
@@ -22,13 +30,13 @@
 
   <property>
     <name>javax.jdo.option.ConnectionUserName</name>
-    <value>2Mta3CpZeJRA5AS.hive</value>
+    <value>oracle-mysql</value>
     <description>Username to use against metastore database.</description>
   </property>
 
   <property>
     <name>javax.jdo.option.ConnectionPassword</name>
-    <value>546085758</value>
+    <value>^J3F28ObUcqUUo</value>
     <description>Password to use against metastore database.</description>
   </property>
 
