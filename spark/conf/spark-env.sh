@@ -80,7 +80,4 @@
 # - SPARK_BEELINE_OPTS, to set config properties only for the beeline cli (e.g. "-Dx=y")
 # - SPARK_BEELINE_MEMORY, Memory for beeline (e.g. 1000M, 2G) (Default: 1G)
 
-export HADOOP_HOME=/data/bigdata/bin/hadoop
-export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
-export SPARK_HOME=/data/bigdata/bin/spark
+source /data/bigdata/etc/bigdata.sh
