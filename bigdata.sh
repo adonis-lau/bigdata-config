@@ -1,7 +1,7 @@
 # HADOOP
 export HADOOP_HOME=/data/bigdata/bin/hadoop
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
-export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
+# export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin
 # export PATH=$PATH:$HADOOP_HOME/sbin
 export JAVA_LIBRAY_PATH=$HADOOP_HOME/lib/native

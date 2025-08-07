@@ -34,20 +34,12 @@
   </property>
   <property>
     <name>dfs.datanode.http.address</name>
-    <value>local.server.cn.eu.org:50075</value>
+    <value>local.server.cn.eu.org:9864</value>
     <description>
       The datanode http server address and port.
       If the port is 0 then the server will start on a free port.
     </description>
   </property>
-  <!-- <property>
-    <name>dfs.http.address</name>
-    <value>local.server.cn.eu.org:50070</value>
-    <description>
-      The address and the base port where the dfs namenode web ui will listen on.
-      If the port is 0 then the server will start on a free port.
-    </description>
-  </property> -->
   <property>
     <name>dfs.namenode.http-address</name>
     <value>local.server.cn.eu.org:9870</value>
