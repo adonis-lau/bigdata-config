@@ -63,6 +63,14 @@ jobmanager:
     # Only restart tasks that may have been affected by the task failure, which typically includes
     # downstream tasks and potentially upstream tasks if their produced data is no longer available for consumption.
     failover-strategy: region
+  
+  # The HistoryServer is started and stopped via bin/historyserver.sh (start|stop)
+  archive:
+    fs:
+      # Directory to upload completed jobs to. Add this directory to the list of
+      # monitored directories of the HistoryServer as well (see below).
+      dir: hdfs://local.server.cn.eu.org:8020/flink/completed-jobs/
+
 
 taskmanager:
   # The host interface the TaskManager will bind to. By default, this is localhost, and will prevent
@@ -279,14 +287,6 @@ rest:
 #==============================================================================
 
 # The HistoryServer is started and stopped via bin/historyserver.sh (start|stop)
-#
-jobmanager:
-  archive:
-    fs:
-      # Directory to upload completed jobs to. Add this directory to the list of
-      # monitored directories of the HistoryServer as well (see below).
-      dir: hdfs://local.server.cn.eu.org:8020/flink/completed-jobs/
-
 historyserver:
   web:
     # The address under which the web-based HistoryServer listens.
@@ -299,5 +299,3 @@ historyserver:
       dir: hdfs://local.server.cn.eu.org:8020/flink/completed-jobs/
       # Interval in milliseconds for refreshing the monitored directories.
       fs.refresh-interval: 10000
-
-# 

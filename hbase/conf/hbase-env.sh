@@ -117,7 +117,7 @@ export JAVA_HOME=/usr/lib/jvm/default
 
 # The directory where pid files are stored. /tmp by default.
 # export HBASE_PID_DIR=/var/hadoop/pids
-export HBASE_PID_DIR=/data/bigdata/ops/tmp-$USER/pids
+export HBASE_PID_DIR=/data/bigdata/ops/tmp/hbase/pids
 
 # Seconds to sleep between slave commands.  Unset by default.  This
 # can be useful in large clusters, where, e.g., slave rsyncs can

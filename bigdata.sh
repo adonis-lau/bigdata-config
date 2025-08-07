@@ -1,6 +1,13 @@
+export BIGDATA_HOME=/data/bigdata
+export PATH=$PATH:$BIGDATA_HOME/bin
+
+# JDK
+export JAVA_HOME=/usr/lib/jvm/default
+
 # HADOOP
 export HADOOP_HOME=/data/bigdata/bin/hadoop
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export HADOOP_PID_DIR=/data/bigdata/ops/tmp/hadoop/pids
 # export YARN_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin
 # export PATH=$PATH:$HADOOP_HOME/sbin
@@ -12,7 +19,7 @@ export FLINK_HOME=/data/bigdata/bin/flink
 export PATH=$PATH:$FLINK_HOME/bin
 
 # HBASE
-export HBASE_HOME=/data/bigdata/bin/habse
+export HBASE_HOME=/data/bigdata/bin/hbase
 export HBASE_CONF_DIR=$HBASE_HOME/conf
 export PATH=$PATH:$HBASE_HOME/bin
 
@@ -39,4 +46,3 @@ export HDFS_DATANODE_USER=root
 export HDFS_SECONDARYNAMENODE_USER=root
 export YARN_RESOURCEMANAGER_USER=root
 export YARN_NODEMANAGER_USER=root
-

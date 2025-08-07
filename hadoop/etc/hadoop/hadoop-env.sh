@@ -433,7 +433,7 @@ export HADOOP_OS_TYPE=${HADOOP_OS_TYPE:-$(uname -s)}
 # server jvm.
 # export HADOOP_REGISTRYDNS_SECURE_EXTRA_OPTS="-jvm server"
 
-export JAVA_HOME=/usr/lib/jvm/default
+source /data/bigdata/etc/bigdata.sh
 
 # 解决遇到的 java.lang.reflect.InaccessibleObjectException 错误
 # 由于 JDK 17 和 Java 模块系统的兼容性问题导致的。
