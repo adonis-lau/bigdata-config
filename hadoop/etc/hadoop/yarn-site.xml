@@ -66,14 +66,14 @@
 
   <property>
     <name>yarn.scheduler.minimum-allocation-mb</name>
-    <value>1024</value>
+    <value>256</value>
     <description>
       The minimum allocation for every container request at the RM,in MBs. Memory requests lower than this won't take effect,and the specified value will get allocated at minimum.
     </description>
   </property>
   <property>
     <name>yarn.scheduler.maximum-allocation-mb</name>
-    <value>16384</value>
+    <value>4096</value>
     <description>
       The maximum allocation for every container request at the RM,in MBs. Memory requests higher than this won't take effect,and will get capped to this value.
     </description>
