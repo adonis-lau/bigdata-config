@@ -18,7 +18,7 @@
 
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:mysql://10.0.0.163:3306/hive_metastore?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;allowMultiQueries=true&amp;useCursorFetch=true&amp;sslMode=VERIFY_IDENTITY&amp;enabledTLSProtocols=TLSv1.2,TLSv1.3&amp;serverTimezone=Asia/Shanghai</value>
+    <value>jdbc:mysql://10.0.0.27:3306/hive_metastore?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8&amp;allowMultiQueries=true&amp;useCursorFetch=true&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai</value>
     <description>JDBC connect string for a JDBC metastore.</description>
   </property>
 
@@ -30,19 +30,19 @@
 
   <property>
     <name>javax.jdo.option.ConnectionUserName</name>
-    <value>oracle-mysql</value>
+    <value>root</value>
     <description>Username to use against metastore database.</description>
   </property>
 
   <property>
     <name>javax.jdo.option.ConnectionPassword</name>
-    <value>^J3F28ObUcqUUo</value>
+    <value>ln!7k1MrRMvDv0C1Z1</value>
     <description>Password to use against metastore database.</description>
   </property>
 
   <property>
     <name>hive.metastore.warehouse.dir</name>
-    <value>/user/hive/warehouse</value>
+    <value>/hive/warehouse</value>
   </property>
 
   <property>
@@ -68,16 +68,6 @@
   </property>
 
   <property>
-    <name>hive.server2.thrift.port</name>
-    <value>10000</value>
-  </property>
-
-  <property>
-    <name>hive.server2.thrift.bind.host</name>
-    <value>local.server.cn.eu.org</value>
-  </property>
-
-  <property>
     <name>hive.metastore.event.db.notification.api.auth</name>
     <value>false</value>
   </property>
@@ -91,4 +81,16 @@
     <name>hive.cli.print.current.db</name>
     <value>true</value>
   </property>
+
+  <property>
+    <name>hive.execution.engine</name>
+    <value>mr</value>
+    <description>
+      Expects one of [mr, tez].
+      Chooses execution engine. Options are: mr (Map reduce, default), tez. While MR
+      remains the default engine for historical reasons, it is itself a historical engine
+      and is deprecated in Hive 2 line. It may be removed without further warning.
+    </description>
+  </property>
+
 </configuration>
