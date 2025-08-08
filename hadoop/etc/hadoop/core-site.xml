@@ -34,18 +34,12 @@
   </property>
   <property>
     <name>io.compression.codecs</name>
-    <value>
-      org.apache.hadoop.io.compress.GzipCodec,org.apache.hadoop.io.compress.DefaultCodec,org.apache.hadoop.io.compress.BZip2Codec,org.apache.hadoop.io.compress.SnappyCodec,com.hadoop.compression.lzo.LzoCodec,com.hadoop.compression.lzo.LzopCodec</value>
+    <value>org.apache.hadoop.io.compress.GzipCodec,org.apache.hadoop.io.compress.DefaultCodec,org.apache.hadoop.io.compress.BZip2Codec,org.apache.hadoop.io.compress.SnappyCodec</value>
     <description>
       A comma-separated list of the compression codec classes that can be used for
       compression/decompression. In addition to any classes specified with this property (which take
       precedence), codec classes on the classpath are discovered using a Java ServiceLoader.
     </description>
-  </property>
-  <!-- LZO压缩的LzoCodec类名 -->
-  <property>
-    <name>io.compression.codec.lzo.class</name>
-    <value>com.hadoop.compression.lzo.LzoCodec</value>
   </property>
 
   <property>
