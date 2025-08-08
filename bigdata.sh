@@ -33,6 +33,7 @@ export PATH=$PATH:$ZOOKEEPER_HOME/bin
 # Hive
 export HIVE_HOME=/data/bigdata/bin/hive
 export HIVE_CONF_DIR=$HIVE_HOME/conf
+export HIVESERVER2_PID_DIR=/data/bigdata/ops/tmp/hive/pids
 export PATH=$PATH:$HIVE_HOME/bin
 
 # Tez
