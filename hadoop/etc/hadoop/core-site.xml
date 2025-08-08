@@ -29,7 +29,7 @@
   </property>
   <property>
     <name>hadoop.tmp.dir</name>
-    <value>/data/bigdata/ops/tmp/hadoop-${user.name}</value>
+    <value>/data/bigdata/ops/tmp/hadoop</value>
     <description>A base for other temporary directories.</description>
   </property>
   <property>

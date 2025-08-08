@@ -2,7 +2,7 @@
 source /data/bigdata/etc/bigdata.sh
 
 $FLINK_HOME/bin/historyserver.sh stop
-$SPARK_HOME/sbin/start-history-server.sh
+$SPARK_HOME/sbin/stop-history-server.sh
 kill -9 `ps -ef |grep HiveServer2 |grep -v grep|awk '{print $2}'`
 kill -9 `ps -ef |grep HiveMetaStore |grep -v grep|awk '{print $2}'`
 $HBASE_HOME/bin/hbase-daemon.sh stop master

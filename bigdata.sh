@@ -14,6 +14,7 @@ export HADOOP_CLASSPATH=$(hadoop classpath)
 
 # Flink
 export FLINK_HOME=/data/bigdata/bin/flink
+export FLINK_PID_DIR=/data/bigdata/ops/tmp/flink/pids
 export PATH=$PATH:$FLINK_HOME/bin
 
 # HBASE
@@ -36,6 +37,7 @@ export PATH=$PATH:$HIVE_HOME/bin
 # Spark
 export SPARK_HOME=/data/bigdata/bin/spark
 export SPARK_DIST_CLASSPATH=$(hadoop classpath)
+export SPARK_PID_DIR=/data/bigdata/ops/tmp/spark/pids
 export PATH=$PATH:$SPARK_HOME/bin
 
 # UGA
