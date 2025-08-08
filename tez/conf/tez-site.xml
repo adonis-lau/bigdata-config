@@ -1,0 +1,20 @@
+<configuration>
+    <!-- 关键配置: 指定Tez应用库在HDFS上的位置 -->
+    <property>
+        <name>tez.lib.uris</name>
+        <!-- 路径必须是HDFS的完整URI, 主机名和端口号要和您的core-site.xml中的fs.defaultFS一致 -->
+        <value>hdfs://local.server.cn.eu.org:8020/tez/tez.tar.gz</value>
+    </property>
+
+    <!-- 推荐配置: 让Tez使用集群上已有的Hadoop库, 避免版本冲突 -->
+    <property>
+        <name>tez.use.cluster.hadoop-libs</name>
+        <value>true</value>
+    </property>
+
+    <!-- 可选, 但推荐: 启用Tez UI的历史日志服务 -->
+    <property>
+        <name>tez.history.logging.service.class</name>
+        <value>org.apache.tez.dag.history.logging.ats.ATSHistoryLoggingService</value>
+    </property>
+</configuration>

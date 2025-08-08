@@ -32,7 +32,13 @@ export PATH=$PATH:$ZOOKEEPER_HOME/bin
 
 # Hive
 export HIVE_HOME=/data/bigdata/bin/hive
+export HIVE_CONF_DIR=$HIVE_HOME/conf
 export PATH=$PATH:$HIVE_HOME/bin
+
+# Tez
+export TEZ_HOME=/opt/tez
+export TEZ_CONF_DIR=$TEZ_HOME/conf
+export HADOOP_CLASSPATH=${HADOOP_CLASSPATH}:${TEZ_HOME}/*:${TEZ_HOME}/lib/*:${TEZ_CONF_DIR}
 
 # Spark
 export SPARK_HOME=/data/bigdata/bin/spark
