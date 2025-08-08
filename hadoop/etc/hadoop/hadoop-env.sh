@@ -440,3 +440,5 @@ source /data/bigdata/etc/bigdata.sh
 # Java 9 及以上版本引入了 模块系统, 需要显式地打开特定的模块才能允许访问某些类。
 export HADOOP_OPTS="$HADOOP_OPTS --add-opens java.base/java.lang=ALL-UNNAMED"
 # export YARN_OPTS="$YARN_OPTS --add-opens java.base/java.lang=ALL-UNNAMED"
+
+export LD_LIBRARY_PATH=/usr/lib/openssl-1.1:$LD_LIBRARY_PATH
