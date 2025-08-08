@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<allocations>
+    <user name="default">
+        <maxRunningApps>10</maxRunningApps>
+    </user>
+
+    <queue name="default">
+        <minResources>256 mb,1vcores</minResources>
+        <maxResources>20480 mb,40vcores</maxResources>
+        <maxRunningApps>50</maxRunningApps>
+        <weight>1.0</weight>
+        <schedulingPolicy>drf</schedulingPolicy>
+    </queue>
+</allocations>

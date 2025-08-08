@@ -58,7 +58,7 @@
   </property>
   <property>
     <name>yarn.nodemanager.resource.cpu-vcores</name>
-    <value>4</value>
+    <value>40</value>
     <description>
       Number of CPU cores that can be allocated for containers.
     </description>
@@ -73,7 +73,7 @@
   </property>
   <property>
     <name>yarn.scheduler.maximum-allocation-mb</name>
-    <value>4096</value>
+    <value>2048</value>
     <description>
       The maximum allocation for every container request at the RM,in MBs. Memory requests higher than this won't take effect,and will get capped to this value.
     </description>
@@ -102,5 +102,25 @@
   <property>
     <name>yarn.nodemanager.vmem-check-enabled</name>
     <value>false</value>
+  </property>
+
+  <property>
+    <name>yarn.resourcemanager.scheduler.class</name>
+    <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.FairScheduler</value>
+  </property>
+  <property>
+    <name>yarn.scheduler.fair.allocation.file</name>
+    <value>etc/hadoop/fair-scheduler.xml</value>
+  </property>
+  <property>
+    <name>yarn.scheduler.fair.assignmultiple</name>
+    <value>true</value>
+    <description>Whether to allow multiple container assignments in one heartbeat. Defaults to false.</description>
+  </property>
+
+  <property>
+    <name>yarn.resource-types.memory-mb.increment-allocation</name>
+    <value>256</value>
+    <description>The minimum unit of memory resource allocation.</description>
   </property>
 </configuration>
